@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt3": "latest"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.11"
+  }
+}
