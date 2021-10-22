@@ -1,7 +1,19 @@
+import User from '../models/userModel'
+
 const createUser = async (req, res, next) => {
-  console.log('serverMiddleware', req.body)
-  res.statusCode = 200
-  res.end('Works!ffdgfdsdfs')
+  try {
+
+    console.log("RB", req.body)
+    const user = await User.create(req.body)
+    res.status(201).json({
+      status: "success",
+      data: {
+        user
+      }
+    })
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export { createUser }

@@ -1,8 +1,15 @@
+<script setup lang="ts">
+const router = useRouter()
+const navLinks = router.getRoutes()
+console.log(navLinks)
+</script>
+
 <template>
   <div class="navbar">
     <ul>
-      <li><NuxtLink to="/">Home</NuxtLink></li>
-      <li><NuxtLink to="/about">About</NuxtLink></li>
+      <li v-for="link in navLinks" :index="link.path">
+        <NuxtLink :to="link.path">{{ link }}</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
