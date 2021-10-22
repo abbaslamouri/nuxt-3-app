@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar.vue'
 </script>
 
 <template>
-  <div>
-    <header><Navbar /></header>
+  <div class="app">
+    <Navbar />
     <slot />
     <footer>Footer</footer>
   </div>
