@@ -5,11 +5,18 @@ header {
 
   .navbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 3rem;
 
     .branding {
       display: flex;
       align-items: center;
+
+      img {
+        width: 3rem;
+        margin-right: 1rem;
+      }
 
       .header {
         font-weight: 600;
@@ -82,35 +89,35 @@ header {
     }
   }
 
-  .mobile-nav-transition-enter-active,
-  .mobile-nav-transition-leave-active {
+  .slide-enter-active,
+  .slide-leave-active {
     transition: all 1s ease;
   }
 
-  // .mobile-nav-transition-leave-active {
+  // .slide-leave-active {
   //   transition: all 1s ease-in-out;
   // }
 
-  .mobile-nav-transition-enter-to,
-  .mobile-nav-transition-leave {
+  .slide-enter-to,
+  .slide-leave {
     transform: translateX(0rem);
   }
 
-  .mobile-nav-transition-enter,
-  .mobile-nav-transition-leave-to {
+  .slide-enter,
+  .slide-leave-to {
     transform: translateX(-25rem);
   }
 
-  // .mobile-nav-transition-enter-to,
-  // .mobile-nav-transition-leave {
+  // .slide-enter-to,
+  // .slide-leave {
   //   transform: translateX(0);
   // }
 
-  // .mobile-nav-transition-leave {
+  // .slide-leave {
   //   transform: translateX(0);
   // }
 
-  // .mobile-nav-transition-leave-to {
+  // .slide-leave-to {
   //   transform: translateX(-25rem);
   // }
 }

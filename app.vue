@@ -1,5 +1,6 @@
 <template>
   <div>
-    <NuxtPage />
+    kjjkhhjhjhjjh
+    <!-- <NuxtPage /> -->
   </div>
 </template>

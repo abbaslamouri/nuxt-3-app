@@ -15,9 +15,25 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  border: none;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,16 +1,15 @@
 import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
-  css: [
-    // Load a Node.js module directly (here it's a Sass file)
-    // 'bulma',
-    // CSS file in the project
-    // '~/assets/css/main.css',
-    // SCSS file in the project
-    '~/assets/scss/main.scss',
-  ],
+  // privateRuntimeConfig: {
+  //   apiSecret: process.env.DB_URL,
+  // },
+  // css: ['~/assets/scss/main.scss'],
 
-  buildModules: ['@nuxtjs/svg'],
+  buildModules: [
+    // '@nuxtjs/svg',
+    // '@nuxtjs/dotenv',
+  ],
   //   serverMiddleware: [  {
   //     path: "api/users",
   //     handler: '~/api/users/index.js'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import axios from 'axios'
 
 const heading = ref('Hello from the Home page')
@@ -9,7 +9,7 @@ const pageDescription = 'page description'
 const fetchUsers = async () => {
   const response = await axios({
     method: 'post',
-    url: 'http://localhost:3000/api/users',
+    url: 'http://localhost:3000/api/register',
     data: { name: 'Abbas Lamouri', email: 'abbaslamouri@yrlus.com' },
   })
   console.log(response)

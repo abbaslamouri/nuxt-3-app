@@ -1,6 +1,25 @@
 <script setup lang="ts">
-const router = useRouter()
-const navLinks = router.getRoutes()
+// const router = useRouter()
+// const navLinks = router.getRoutes()
+
+const navLinks = [
+  {
+    path: '/',
+    name: 'index',
+    title: 'Home',
+  },
+  {
+    path: '/about',
+    name: 'about',
+    title: 'About',
+  },
+  {
+    path: '/admin/login',
+    name: 'admin-login',
+    title: 'Login / Register',
+  },
+]
+// console.log(navLinks)
 
 const mobile = ref(false)
 const mobileNav = ref(false)
@@ -29,18 +48,19 @@ onMounted(() => {
   <header>
     <nav class="navbar">
       <div class="branding">
+        <img src="~/assets/img/yrl-logo.png" alt="" />
         <NuxtLink class="header" :to="{ name: `index` }">YRL Consulting</NuxtLink>
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
           <NuxtLink class="link" v-for="link in navLinks" :index="link.path" :to="{ name: link.name }">
-            {{ link.name }}
+            {{ link.title }}
           </NuxtLink>
         </ul>
       </div>
     </nav>
     <img @click="toggleMobileNav" v-show="mobile" class="menu-icon" src="~assets/icons/menu.svg" />
-    <transition name="mobile-nav-transition">
+    <transition name="slide">
       <ul class="mobile-nav" v-show="mobileNav">
         <NuxtLink class="link" v-for="link in navLinks" :index="link.path" :to="{ name: link.name }">
           {{ link.name }}

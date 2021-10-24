@@ -1,0 +1,106 @@
+.form-wrap {
+  display: grid;
+  grid-template-columns: minmax(50rem, 1fr) 2fr;
+  overflow: hidden;
+  align-items: center;
+  font-size: 1.6rem;
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
+
+  // border: 1px red solid;
+  // width: 90%;
+  // height: 100vh;
+  // background: linear-gradient(95Deg, rgba(white, 0.9)40%, rgba(white, 0) 40% 100%),
+  //   url('~/assets/img/background.jpg');
+
+  form {
+    padding: 2rem;
+    border: 1px green solid;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 0;
+
+    .login-register {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      align-items: center;
+      // gap: .1rem;
+      // position: relative;
+
+      img {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        z-index: 10;
+        padding: 1rem;
+
+        // position: absolute;
+        // top: 0.5rem;
+        // left: 1rem;
+      }
+
+      input {
+        flex: 1;
+        padding: 1.2rem 2rem 1.2rem 5rem;
+        background-color: aqua;
+        border-radius: 3px;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        font-size: 1.6rem;
+
+        &:placeholder-shown + label {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-2.5rem);
+        }
+      }
+
+      label {
+        font-size: 1.6rem;
+        margin-left: 5rem;
+        // margin-top: 0.5rem;
+        transition: all 0.9s;
+        align-self: flex-start;
+
+        // transform: translateY(-2.5rem);
+      }
+    }
+
+    button {
+      cursor: pointer;
+      padding: 1.2rem 4rem;
+      color: #fff;
+      background-color: #303030;
+      border-radius: 2rem;
+      width: fit-content;
+      // min-width: 20rem;
+    }
+
+    .forgot-password {
+      margin-top: 3rem;
+    }
+  }
+
+  .background {
+    border: 1px blue solid;
+    transform: rotate(3deg);
+    background-image: url('~/assets/img/background.jpg');
+    height: 100vh;
+    width: 200%;
+    overflow: hidden;
+    @media (max-width: 40rem) {
+      display: none;
+    }
+  }
+}
