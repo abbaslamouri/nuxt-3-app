@@ -1,6 +1,6 @@
-import User from './serverx/models/user'
-import AppError from './serverx/utils/AppError'
-import asyncHandler from './serverx/utils/asyncHandler'
+import User from './server/models/user'
+import AppError from './server/utils/AppError'
+import asyncHandler from './server/utils/asyncHandler'
 
 // token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzViNTk3NzI4MzIyNTU3ZTY0Y2JkNiIsImlhdCI6MTYzNTEwNDE1MSwiZXhwIjoxNjM1MTkwNTUxfQ.z_6BwvKkjWThKwttWZ-3dTLcjKQFXrSXfKD8oFjmdlo"
 
